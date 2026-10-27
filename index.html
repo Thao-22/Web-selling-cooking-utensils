@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bếp Xinh – Dụng cụ nhà bếp</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="hd"><div class="hd-in">
+  <div class="logo" onclick="go('list')"><div><b>Bếp Xinh</b><small>Bếp Xinh – Nâng tầm không gian bếp</small></div></div>
+  <div class="search"><input id="q" placeholder="Tìm kiếm nồi, chảo, dao, thớt..." onkeydown="if(event.key==='Enter')doSearch()"><button onclick="doSearch()" aria-label="Tìm kiếm">🔍</button></div>
+  <div class="acts">
+    <button class="act" onclick="go('cart')"><span>🛒</span>Giỏ hàng<i id="cc">0</i></button>
+    <button class="act" onclick="toggleWishFilter()"><span>♡</span>Yêu thích<i id="wc">0</i></button>
+    <button class="act" onclick="toast('Tính năng đăng nhập sẽ sớm ra mắt')"><span>👤</span>Đăng nhập</button>
+  </div>
+</div></div>
+<div class="nav" id="nav"><div class="nav-in">
+  <button class="burger" onclick="document.getElementById('nav').classList.toggle('open')">☰ Menu</button>
+  <ul>
+    <li><button onclick="resetAll();go('list')">Trang chủ</button></li>
+    <li><button onclick="S.sale=1;go('list')">Khuyến mãi</button></li>
+    <li><button onclick="go('contact')">Liên hệ</button></li>
+  </ul>
+</div></div>
+<div class="wrap"><div class="crumb" id="crumb"></div><main id="app"></main></div>
+<footer>
+  <div class="fg">
+    <div><div class="logo"><div><b>Bếp Xinh</b><small style="color:#e6cdb0">Bếp Xinh – Nâng tầm không gian bếp</small></div></div></div>
+    <div><h5>HỖ TRỢ KHÁCH HÀNG</h5><p>Chính sách đổi trả</p><p>Chính sách vận chuyển</p><p>Chính sách bảo hành</p><p>Câu hỏi thường gặp</p></div>
+    <div><h5>LIÊN HỆ</h5><p>☎ 1900 xxxx</p><p>✉ support@bepxinh.vn</p><p>📍 22 Lê Văn Việt, Tăng Nhơn Phú, Thủ Đức</p></div>
+    <div><h5>THEO DÕI BẾP XINH</h5><div class="soc"><span title="Facebook" onclick="window.scrollTo({top:0,behavior:'smooth'})">f</span><span title="Instagram" onclick="window.scrollTo({top:0,behavior:'smooth'})">ig</span><span title="TikTok" onclick="window.scrollTo({top:0,behavior:'smooth'})">tt</span><span title="YouTube" onclick="window.scrollTo({top:0,behavior:'smooth'})">▶</span></div></div>
+  </div>
+  <div class="copy">© 2026 Bếp Xinh – Đồ bếp xinh, nấu ăn thêm vui.</div>
+</footer>
+<div class="toast" id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>
